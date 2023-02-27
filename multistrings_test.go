@@ -115,7 +115,7 @@ func ExampleMultiStrings_Cut() {
 	lns = linesSample1()
 	fmt.Println(lns.Cut(-7))
 
-	lns = NewMultiStringsFromString("Wie geht's les samis ? ")
+	lns = NewFromString("Wie geht's les samis ? ")
 	fmt.Println(lns.Cut(21))
 
 	//Output:
@@ -712,7 +712,7 @@ func ExampleAlignment() {
 
 func ExampleBoxStyle() {
 	for i := 2; i <= BoxStyleMaxIndex; i++ {
-		fmt.Println(NewMultiStringsFromString(BoxStyle(i).String()).PadRight(" ", 38).Surround(" ", " ").AutoBox(BoxSettings{40, "", LabelAlignLeft, "", LabelAlignLeft}, GetBoxPattern(BoxStyle(i))))
+		fmt.Println(NewFromString(BoxStyle(i).String()).PadRight(" ", 38).Surround(" ", " ").AutoBox(BoxSettings{40, "", LabelAlignLeft, "", LabelAlignLeft}, GetBoxPattern(BoxStyle(i))))
 	}
 	//Output:
 	// ┌────────────────────────────────────────┐
@@ -839,7 +839,7 @@ func ExampleMultiStrings_Append() {
 	lns2 := linesSample2(2)
 	fmt.Println(lns.Append(lns2))
 	fmt.Println(lns.Append(lns2).AutoBox(BoxSettings{1, "", LabelAlignLeft, "", LabelAlignRight}, GetBoxPattern(BoxStyleSingleLine)))
-	fmt.Println(lns.Append(NewMultiStringsFromString("T'inquiète, ch'ai ramené du schpeck\ndu chambon et un kuglopf.")))
+	fmt.Println(lns.Append(NewFromString("T'inquiète, ch'ai ramené du schpeck\ndu chambon et un kuglopf.")))
 	//Output:
 	// Lorem Elsass ipsum gal non hoplageiss
 	// vielmols, jetz gehts los picon bière

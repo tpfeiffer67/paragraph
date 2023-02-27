@@ -60,10 +60,10 @@ func NewWithPresetContent(line string, count int) (linesOut MultiStrings) {
 	return
 }
 
-// NewMultiStringsFromString creates and returns a new MultiStrings slice from a string.
+// NewFromString creates and returns a new MultiStrings slice from a string.
 // The given string is split into separate substrings at each occurrence of a newline character.
 // - s is a string from which to create the new MultiStrings slice.
-func NewMultiStringsFromString(s string) MultiStrings {
+func NewFromString(s string) MultiStrings {
 	return strings.Split(s, "\n")
 }
 

@@ -18,7 +18,7 @@ import (
 - NewWithGivenLen creates a MultiStrings with a given length.
 - NewFromStringSlice creates a MultiStrings from a string slice.
 - NewWithPresetContent creates a MultiStrings with a preset line count and content.
-- NewMultiStringsFromString creates a MultiStrings from a string.
+- NewFromString creates a MultiStrings from a string.
 - WriteToFile writes the MultiStrings to a file.
 - ToString concatenates the MultiStrings into a string with a given line separator.
 - String, the Stringer interface.
