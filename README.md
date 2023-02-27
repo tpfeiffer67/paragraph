@@ -12,6 +12,25 @@ import (
 )
 ```
 
+## Functions
+
+- New creates a MultiStrings with a given capacity.
+- NewWithGivenLen creates a MultiStrings with a given length.
+- NewFromStringSlice creates a MultiStrings from a string slice.
+- NewWithPresetContent creates a MultiStrings with a preset line count and content.
+- NewMultiStringsFromString creates a MultiStrings from a string.
+- WriteToFile writes the MultiStrings to a file.
+- ToString concatenates the MultiStrings into a string with a given line separator.
+- String, the Stringer interface.
+- Width returns the length of the longest string in the MultiStrings.
+- Cut truncates the MultiStrings to a given maximum width by cutting strings that exceed it.
+- Limit truncates the MultiStrings to a given maximum width by splitting strings that exceed it.
+- PadRight pads the MultiStrings on the right side of each string with a fill pattern to achieve a given width.
+- Sort sorts the MultiStrings in lexicographically increasing order.
+
+## Dependencies
+The package [runesstr](https://github.com/tpfeiffer67/runesstr) is imported to work with Unicode characters in the strings.
+
 ## Examples
 
 Example 1
@@ -31,7 +50,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
 func main() {
-	ms := multistrings.NewMultiStringsFromString(loremipsum)
+	ms := multistrings.NewFromString(loremipsum)
 	fmt.Println(ms)
 }
 ```
