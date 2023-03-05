@@ -1,32 +1,32 @@
-# multistrings
+# paragraph
 
-## What is multistrings?
+## What is paragraph?
 
-**multistrings** is a small library to manipulate multiple strings as a whole.
+**paragraph** is a small library to manipulate multiple strings as a whole.
 
 ## Usage
 
 ```golang
 import (
-    "github.com/tpfeiffer67/multistrings"
+    "github.com/tpfeiffer67/paragraph"
 )
 ```
 
 ## Functions
 
-- New creates a MultiStrings with a given capacity.
-- NewWithGivenLen creates a MultiStrings with a given length.
-- NewFromStringSlice creates a MultiStrings from a string slice.
-- NewWithPresetContent creates a MultiStrings with a preset line count and content.
-- NewFromString creates a MultiStrings from a string.
-- WriteToFile writes the MultiStrings to a file.
-- ToString concatenates the MultiStrings into a string with a given line separator.
+- New creates a Paragraph with a given capacity.
+- NewWithGivenLen creates a Paragraph with a given length.
+- NewFromStringSlice creates a Paragraph from a string slice.
+- NewWithPresetContent creates a Paragraph with a preset line count and content.
+- NewFromString creates a Paragraph from a string.
+- WriteToFile writes the Paragraph to a file.
+- ToString concatenates the Paragraph into a string with a given line separator.
 - String, the Stringer interface.
-- Width returns the length of the longest string in the MultiStrings.
-- Cut truncates the MultiStrings to a given maximum width by cutting strings that exceed it.
-- Limit truncates the MultiStrings to a given maximum width by splitting strings that exceed it.
-- PadRight pads the MultiStrings on the right side of each string with a fill pattern to achieve a given width.
-- Sort sorts the MultiStrings in lexicographically increasing order.
+- Width returns the length of the longest string in the Paragraph.
+- Cut truncates the Paragraph to a given maximum width by cutting strings that exceed it.
+- Limit truncates the Paragraph to a given maximum width by splitting strings that exceed it.
+- PadRight pads the Paragraph on the right side of each string with a fill pattern to achieve a given width.
+- Sort sorts the Paragraph in lexicographically increasing order.
 
 ## Dependencies
 The package [runesstr](https://github.com/tpfeiffer67/runesstr) is imported to work with Unicode characters in the strings.
@@ -40,7 +40,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/tpfeiffer67/multistrings"
+	"github.com/tpfeiffer67/paragraph"
 )
 
 const loremipsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -50,7 +50,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
 func main() {
-	ms := multistrings.NewFromString(loremipsum)
+	ms := paragraph.NewFromString(loremipsum)
 	fmt.Println(ms)
 }
 ```

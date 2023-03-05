@@ -1,4 +1,4 @@
-package multistrings
+package paragraph
 
 import (
 	"bytes"
@@ -55,7 +55,7 @@ func TestWriteToFile(t *testing.T) {
 	assert.Error(err)
 }
 
-func linesSample1() (lns MultiStrings) {
+func linesSample1() (lns Paragraph) {
 	lns = New(3)
 	lns = append(lns, "Ceci est une  ligne relativement longue")
 	lns = append(lns, "Ligne courte ¨")
@@ -63,7 +63,7 @@ func linesSample1() (lns MultiStrings) {
 	return
 }
 
-func linesSample2(n int) (lns MultiStrings) {
+func linesSample2(n int) (lns Paragraph) {
 	lns = New(n)
 	// lorem ipsum alsacien https://www.alsacreations.com/page/schnapsum
 	if n > 0 {

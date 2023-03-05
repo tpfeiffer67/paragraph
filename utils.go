@@ -1,4 +1,4 @@
-package multistrings
+package paragraph
 
 func maxint(x, y int) int {
 	if x > y {

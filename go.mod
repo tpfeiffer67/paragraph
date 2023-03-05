@@ -1,4 +1,4 @@
-module github.com/tpfeiffer67/multistrings
+module github.com/tpfeiffer67/paragraph
 
 go 1.20
 

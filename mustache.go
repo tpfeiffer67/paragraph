@@ -1,4 +1,4 @@
-package multistrings
+package paragraph
 
 import (
 	"errors"
@@ -7,12 +7,12 @@ import (
 	"github.com/alexkappa/mustache"
 )
 
-func (linesIn MultiStrings) MustacheNoErr(m map[string]interface{}) (linesOut MultiStrings) {
+func (linesIn Paragraph) MustacheNoErr(m map[string]interface{}) (linesOut Paragraph) {
 	linesOut, _ = linesIn.Mustache(m)
 	return
 }
 
-func (linesIn MultiStrings) Mustache(m map[string]interface{}) (linesOut MultiStrings, err error) {
+func (linesIn Paragraph) Mustache(m map[string]interface{}) (linesOut Paragraph, err error) {
 	linesOut = NewWithGivenLen(len(linesIn))
 	moustache := mustache.New()
 

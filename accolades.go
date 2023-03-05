@@ -1,6 +1,6 @@
-package multistrings
+package paragraph
 
-func (linesIn MultiStrings) Accolades(style AccoladesStyle) (linesOut MultiStrings) {
+func (linesIn Paragraph) Accolades(style AccoladesStyle) (linesOut Paragraph) {
 	if style == AccoladesStyleNone {
 		return linesIn
 	}
@@ -21,7 +21,7 @@ func (linesIn MultiStrings) Accolades(style AccoladesStyle) (linesOut MultiStrin
 	return
 }
 
-func (linesIn MultiStrings) AutoAccolades(style AccoladesStyle) (linesOut MultiStrings) {
+func (linesIn Paragraph) AutoAccolades(style AccoladesStyle) (linesOut Paragraph) {
 	if style == AccoladesStyleNone {
 		return linesIn
 	}

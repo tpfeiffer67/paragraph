@@ -1,4 +1,4 @@
-package multistrings
+package paragraph
 
 import (
 	"github.com/tpfeiffer67/runesstr"
@@ -57,7 +57,7 @@ func GetBoxPattern(style BoxStyle) BoxPattern {
 	return boxPatterns[style]
 }
 
-func (linesIn MultiStrings) AutoBox(settings BoxSettings, pattern BoxPattern) MultiStrings {
+func (linesIn Paragraph) AutoBox(settings BoxSettings, pattern BoxPattern) Paragraph {
 	if settings.Width < 1 || settings.Width > MultiStringsMaxWidth || pattern == boxPatterns[BoxStyleNone] {
 		return linesIn
 	}
@@ -72,7 +72,7 @@ func (linesIn MultiStrings) AutoBox(settings BoxSettings, pattern BoxPattern) Mu
 	return linesIn.PadRight(" ", w).Box(settings, pattern)
 }
 
-func (linesIn MultiStrings) Box(settings BoxSettings, pattern BoxPattern) (linesOut MultiStrings) {
+func (linesIn Paragraph) Box(settings BoxSettings, pattern BoxPattern) (linesOut Paragraph) {
 	if settings.Width < 1 || settings.Width > MultiStringsMaxWidth || pattern == boxPatterns[BoxStyleNone] {
 		return linesIn
 	}
